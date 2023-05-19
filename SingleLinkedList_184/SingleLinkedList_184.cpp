@@ -25,7 +25,15 @@ void addNode() {
 		if (START != NULL && nim == START->NoMhs) {
 			cout << " NIM suda ada " << endl;
 			return;
-
 		}
+		nodeBaru->next = START;
+		START = nodeBaru;
+		return;
+	}
+	Node* previous = START;
+	Node* current = START;
+
+	while ((current != NULL) && (nim = > current->NoMhs)) {
+		
 	}
 }
