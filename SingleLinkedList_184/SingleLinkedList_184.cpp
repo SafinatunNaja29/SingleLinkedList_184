@@ -21,4 +21,11 @@ void addNode() {
 	nodeBaru->NoMhs = nim;
 	nodeBaru->name = nama;
 
+	if (START == NULL || nim <= START->NoMhs) {
+		if (START != NULL && nim == START->NoMhs) {
+			cout << " NIM suda ada " << endl;
+			return;
+
+		}
+	}
 }
