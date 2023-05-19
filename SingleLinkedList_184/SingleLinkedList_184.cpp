@@ -58,4 +58,8 @@ bool searchNode(int nim, Node* current, Node* previous) {
 		previous = current;
 		current = current->next;
 	}
+	if (current == NULL)
+	{
+		
+	}
 }
