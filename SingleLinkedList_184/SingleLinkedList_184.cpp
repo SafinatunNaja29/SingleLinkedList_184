@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-struct Node
-{
+struct Node {
 	int NoMhs;
 	string name;
 	Node* next;
@@ -22,25 +21,31 @@ void addNode() {
 	nodeBaru->name = nama;
 
 	if (START == NULL || nim <= START->NoMhs) {
-		if (START != NULL && nim == START->NoMhs) {
+		if (START != NULL && nim == START->NoMhs) 
+		{
 			cout << " NIM suda ada " << endl;
 			return;
 		}
+
 		nodeBaru->next = START;
 		START = nodeBaru;
 		return;
 	}
+
 	Node* previous = START;
 	Node* current = START;
 
-	while ((current != NULL) && (nim >= current->NoMhs)) {
-		if (nim == current->NoMhs) {
+	while ((current != NULL) && (nim >= current->NoMhs)) 
+	{
+		if (nim == current->NoMhs) 
+		{
 			cout << " NIM sudah ada " << endl;
 			return;
 		}
 		previous = current;
 		current = current->next;
 	}
+
 	nodeBaru->next = current;
 	previous->next = nodeBaru;
 }
@@ -48,5 +53,9 @@ void addNode() {
 bool searchNode(int nim, Node* current, Node* previous) {
 	previous = START;
 	current = START;
-
+	while (current != NULL && nim > current->NoMhs)
+	{
+		previous = current;
+		current = current->next;
+	}
 }
