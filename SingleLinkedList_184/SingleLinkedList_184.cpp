@@ -99,5 +99,9 @@ void traverse() {
 	}
 	else {
 		Node* currentNode = START;
+		while (currentNode != NULL) {
+			cout << "NIM : " << currentNode->NoMhs << ", Nama : " << currentNode->name << endl;
+			currentNode = currentNode->next;
+		}
 	}
 }
